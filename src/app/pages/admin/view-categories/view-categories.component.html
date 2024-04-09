@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-action-list style="height: 650px;">
+        <div mat-subheader style="text-align: center; position: relative;">
+            <h1>My Profile Details</h1>
+            <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 2px; background-color: black;"></div>
+            <div style="position: absolute; bottom: -5px; left: 50%; transform: translateX(-50%); width: 30px; height: 2px; background-color: black;"></div>
+    </div>
+        
+        <mat-list-item mat-list-item mat-list-item style="width: 100%; height: 100px;" *ngFor="let c of categories">
+            <mat-icon mat-list-icon>category</mat-icon>
+            <div mat-line>{{c.title}}</div>
+            <div>{{c.description}}</div>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+
+        <div class="container text-center mt20">
+            <button routerLink="/admin/add-category" mat-raised-button color="primary">Add New Category</button>
+        </div>
+        
+    </mat-action-list>
+</mat-card>
